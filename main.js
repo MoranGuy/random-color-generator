@@ -153,6 +153,8 @@ const CSS_COLOR_NAMES = [
   'YellowGreen',
 ]
 
+// This chunk of code allows user to copy color code to their clipboard
+
 colorDisplay.onclick = function () {
   document.execCommand('copy')
 }
@@ -163,8 +165,10 @@ colorDisplay.addEventListener('copy', function (event) {
     event.clipboardData.setData('text/plain', colorDisplay.textContent)
   }
   copiedText.classList.remove('hidden')
-  setTimeout(() => copiedText.classList.add('hidden'), 1500)
+  setTimeout(() => copiedText.classList.add('hidden'), 1500) // Makes the text "Coped to Clipboard!" disappear in 1.5s
 })
+
+// A function that checks whether to generate Keyword Color or Hexadecimal Color
 
 const typeChecker = () => {
   if (radioButtons[0].checked) {
@@ -183,14 +187,14 @@ const HexGenerator = () => {
   while (i < 6) {
     hexCode += symbols[Math.floor(Math.random() * symbols.length)]
     i++
-  }
+  } // Creating a random Hexadecimal Color Code
   document.body.style.backgroundColor = hexCode
   colorDisplay.innerHTML = hexCode
 }
 
 const KeywordGenerator = () => {
   let keyword =
-    CSS_COLOR_NAMES[Math.floor(Math.random() * CSS_COLOR_NAMES.length)]
+    CSS_COLOR_NAMES[Math.floor(Math.random() * CSS_COLOR_NAMES.length)] // Picking a random Keyword Color from CSS_COLOR_NAMES array
   document.body.style.backgroundColor = keyword
   colorDisplay.innerHTML = keyword
 }
