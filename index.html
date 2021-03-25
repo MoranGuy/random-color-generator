@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Color Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <header>Color Generator</header>
+    <div class="app-container">
+      <label
+        ><input
+          type="radio"
+          checked
+          class="radio"
+          name="type-selector"
+          value="Keyword"
+        />
+        Keyword</label
+      >
+      <label
+        ><input type="radio" class="radio" name="type-selector" value="Hex" />
+        Hex</label
+      >
+      <h3 class="copied-text hidden">Copied to Clipboard!</h3>
+      <h1 class="display-text">Your Color</h1>
+    </div>
+    <div class="generate-button">
+      <button class="btn">Generate Color</button>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
