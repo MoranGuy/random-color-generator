@@ -1,2 +1,2 @@
-# random-color-generator
-The first frontend project that I've built by myself, without using any tutorials. It lets you generate random color using Keyword or Hexadecimal number.
+Random Color Generator is my first little frontend project. 
+The name really speaks for it functionality - you can generate a random number, using a CSS Keyword, such as 'lightgrey' or 'rebeccapurple' (I see you, Florin Pop), or a Hexadecimal number (#9FA953, for example).
